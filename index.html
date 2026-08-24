@@ -13,7 +13,6 @@
         .card img { width: 200px; height: 180px; object-fit: cover; border-radius: 8px; }
         .price { font-weight: bold; color: #e91e63; font-size: 18px; }
         button { background: #000; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 5px; }
-        button:hover { background: #333; }
         #cart-list { position: fixed; top: 70px; right: 20px; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); display: none; width: 250px; z-index: 100; }
     </style>
 </head>
@@ -43,16 +42,16 @@
             <button onclick="addToCart('Men\'s Formal Shoe', 1899)">Buy Now</button>
         </div>
         <div class="card">
-            <img src="images/loafer.jpg" alt="Flat">
-            <h3>Classic Flat Sandal</h3>
-            <p class="price">₹1,299</p>
-            <button onclick="addToCart('Classic Flat Sandal', 1299)">Buy Now</button>
-        </div>
-        <div class="card">
             <img src="images/sneaker.jpg" alt="Sneaker">
             <h3>Trendy Sneaker</h3>
             <p class="price">₹1,499</p>
             <button onclick="addToCart('Trendy Sneaker', 1499)">Buy Now</button>
+        </div>
+        <div class="card">
+            <img src="images/loafer.jpg" alt="Flat">
+            <h3>Classic Flat Sandal</h3>
+            <p class="price">₹1,299</p>
+            <button onclick="addToCart('Classic Flat Sandal', 1299)">Buy Now</button>
         </div>
     </div>
 
