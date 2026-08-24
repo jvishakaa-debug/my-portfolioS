@@ -1,40 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoleStyle - Footwear</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-        .cart-icon { background: black; color: white; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
-        .footwear { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
-        .card { background: white; border-radius: 10px; padding: 15px; width: 220px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .card img { width: 200px; height: 180px; object-fit: cover; border-radius: 8px; }
-        .price { font-weight: bold; color: #e91e63; font-size: 18px; }
-        button { background: #000; color: white; padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 5px; }
-        #cart-list { position: fixed; top: 70px; right: 20px; background: white; border-radius: 10px; padding: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); display: none; width: 250px; z-index: 100; }
-    </style>
-</head>
-<body>
-    <nav>
-        <h1>SoleStyle</h1>
-        <div class="cart-icon" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</div>
-    </nav>
-
-    <div id="cart-list">
-        <h3>Your Cart</h3>
-        <div id="cart-items">Empty pa!</div>
-        <p><b>Total: ₹<span id="cart-total">0</span></b></p>
-    </div>
-
-    <div class="footwear">
-        <div class="card">
-            <img src="images/heels.jpg" alt="Heeled">
-            <h3>Women's Heeled Sandal</h3>
-            <p class="price">₹1,299</p>
-            <button onclick="addToCart('Women\'s Heeled Sandal', 1299)">Buy Now</button>
-        </div>
+<div class="footwear">
         <div class="card">
             <img src="images/formal.jpg" alt="Formal">
             <h3>Men's Formal Shoe</h3>
@@ -42,10 +6,10 @@
             <button onclick="addToCart('Men\'s Formal Shoe', 1899)">Buy Now</button>
         </div>
         <div class="card">
-            <img src="images/sneaker.jpg" alt="Sneaker">
-            <h3>Trendy Sneaker</h3>
-            <p class="price">₹1,499</p>
-            <button onclick="addToCart('Trendy Sneaker', 1499)">Buy Now</button>
+            <img src="images/heels.jpg" alt="Heeled">
+            <h3>Women's Heeled Sandal</h3>
+            <p class="price">₹1,299</p>
+            <button onclick="addToCart('Women\'s Heeled Sandal', 1299)">Buy Now</button>
         </div>
         <div class="card">
             <img src="images/loafer.jpg" alt="Flat">
@@ -53,24 +17,10 @@
             <p class="price">₹1,299</p>
             <button onclick="addToCart('Classic Flat Sandal', 1299)">Buy Now</button>
         </div>
+        <div class="card">
+            <img src="images/sneaker.jpg" alt="Sneaker">
+            <h3>Trendy Sneaker</h3>
+            <p class="price">₹1,499</p>
+            <button onclick="addToCart('Trendy Sneaker', 1499)">Buy Now</button>
+        </div>
     </div>
-
-<script>
-let cart = [];
-let total = 0;
-function addToCart(name, price) {
-    cart.push({name, price});
-    total += price;
-    document.getElementById('cart-count').innerText = cart.length;
-    document.getElementById('cart-total').innerText = total;
-    let itemsDiv = document.getElementById('cart-items');
-    itemsDiv.innerHTML = cart.map(item => `<p>${item.name} - ₹${item.price}</p>`).join('');
-    alert(name + ' added to cart pa! 🛒');
-}
-function toggleCart() {
-    let list = document.getElementById('cart-list');
-    list.style.display = list.style.display === 'none' || list.style.display === '' ? 'block' : 'none';
-}
-</script>
-</body>
-</html>
