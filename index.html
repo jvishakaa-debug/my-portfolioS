@@ -29,33 +29,29 @@
     </div>
 
     <div class="footwear">
-        <!-- heels.jpg = White Brogue = Men's Formal Shoe -->
         <div class="card">
-            <img src="images/heels.jpg" alt="Men's Formal Shoe">
+            <img src="images/formal.jpg" alt="Men's Formal Shoe">
             <h3>Men's Formal Shoe</h3>
             <p class="price">₹1,899</p>
             <button onclick="addToCart('Men\'s Formal Shoe', 1899)">Buy Now</button>
         </div>
 
-        <!-- formal.jpg = Beige Heels = Women's Heeled Sandal -->
         <div class="card">
-            <img src="images/formal.jpg" alt="Women's Heeled Sandal">
+            <img src="images/heels.jpg" alt="Women's Heeled Sandal">
             <h3>Women's Heeled Sandal</h3>
             <p class="price">₹1,299</p>
             <button onclick="addToCart('Women\'s Heeled Sandal', 1299)">Buy Now</button>
         </div>
 
-        <!-- sneaker.jpg = Flat Sandal = Classic Flat Sandal -->
         <div class="card">
-            <img src="images/sneaker.jpg" alt="Classic Flat Sandal">
+            <img src="images/loafer.jpg" alt="Classic Flat Sandal">
             <h3>Classic Flat Sandal</h3>
             <p class="price">₹1,299</p>
             <button onclick="addToCart('Classic Flat Sandal', 1299)">Buy Now</button>
         </div>
 
-        <!-- loafer.jpg = Butterfly Sneaker = Trendy Sneaker -->
         <div class="card">
-            <img src="images/loafer.jpg" alt="Trendy Sneaker">
+            <img src="images/sneaker.jpg" alt="Trendy Sneaker">
             <h3>Trendy Sneaker</h3>
             <p class="price">₹1,499</p>
             <button onclick="addToCart('Trendy Sneaker', 1499)">Buy Now</button>
@@ -65,7 +61,6 @@
 <script>
 let cart = [];
 let total = 0;
-
 function addToCart(name, price) {
     cart.push({name, price});
     total += price;
@@ -74,7 +69,6 @@ function addToCart(name, price) {
     document.getElementById('cart-items').innerHTML = cart.map(item => `<p>${item.name} - ₹${item.price}</p>`).join('');
     alert(name + ' added to cart pa! 🛒');
 }
-
 function toggleCart() {
     let list = document.getElementById('cart-list');
     list.style.display = list.style.display === 'none' || list.style.display === '' ? 'block' : 'none';
